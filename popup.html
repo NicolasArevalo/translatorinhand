@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Translator in Hand</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main>
+    <h1>translator in hand</h1>
+    <div>
+      <div class="textarea">
+        <div class="input_container">
+          <span class="custom-dropdown">
+            <select id="source_lang" name="Language">
+              <option>EN</option>
+              <option>ES</option>
+              <option>DE</option>
+              <option>FR</option>
+              <option>PT</option>
+            </select>
+          </span>
+          <textarea id="textarea" class="textarea_hijo" placeholder="your text here" autofocus wrap="soft"></textarea>
+        </div>
+        <div class="divider transparent"></div>
+        <div class="input_container">
+          <span class="custom-dropdown">
+            <select id="lang" name="Language">
+              <option>ES</option>
+              <option>EN</option>
+              <option>DE</option>
+              <option>FR</option>
+              <option>PT</option>
+            </select>
+          </span>
+          <textarea id="textarea_result" class="textarea_hijo" autofocus wrap="soft" disabled></textarea>
+        </div>
+      </div>
+
+      <div class="botonera">
+        <p class="api_error transparent" id="apiError">problem :c did you add api key?</p>
+        <button id="btnTranslate" class="btn_primary">
+          translate <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+              stroke="#f0f0f0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </main>
+  <section id="info" class="hidden">
+
+    <h2>info</h2>
+    <div class="infotext">
+      <p>Translator in hand by <a href="niiico.com" id="btnNiiico">nico</a>⚡.</p>
+
+      <p><b>Version</b> : 1.0.0</p>
+      <p><b>Shortcut</b>: Alt+T o Cmmd+B</p>
+      <button class="btn_primary" id="buyMeACoffe">Buy me a coffe!</button>
+    </div>
+
+  </section>
+
+  <section id="settings" class="hidden">
+    <h2>settings</h2>
+    <p>Deepl is a free translator online that provides a free translation service. This extension works with the Deepl's
+      API.
+      You need to go and create an account in
+      <a href="https://deepl.com" id="deepl">deepl.com</a>.
+      Once there, go to your account, scroll down and copy and paste here the authentication key, like this one:
+      '9002d45b-99e1-40a4-9077-cbd3fe7b001a:fx' (this way this extension keeps free translations).
+    </p>
+    <button id="gotoOptions" class="btn_secondary">see full instuctions</button>
+    <div class="textarea">
+      <label for="apikey">your api key:</label>
+      <input type="text" name="api key" id="apikeyInput" class="textarea_hijo section_input">
+    </div>
+    <button class="btn_primary" id="btnSaveApiKey">
+      <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M15 19.8935C17.1722 19.7353 18.799 19.4232 19.1111 19.1111C19.5556 18.6667 20 15.5556 20 12C20 11.3687 19.9621 10.4239 19.9316 9.76377C19.9088 9.27176 19.7009 8.80741 19.3526 8.45914L15.5409 4.6474C15.1926 4.29913 14.7282 4.09124 14.2362 4.06844C13.5761 4.03786 12.6313 4 12 4C8.44444 4 5.33333 4.44444 4.88889 4.88889C4.44444 5.33333 4 8.44444 4 12C4 15.5556 4.44444 18.6667 4.88889 19.1111C5.20096 19.4232 6.82776 19.7353 9 19.8935M15 19.8935C14.0786 19.9606 13.059 20 12 20C10.941 20 9.92143 19.9606 9 19.8935M15 19.8935V18C15 18 15 15 12 15C9 15 9 18 9 18V19.8935"
+          stroke="#f0f0f0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      save</button>
+    <p class="api_setted hidden" id="apiAddedMssg">api key successfully added!</p>
+  </section>
+
+
+  <footer>
+    <div>
+      <button class="btn_secondary" id="btnInfo">info</button>
+      <button class="btn_secondary" id="btnSettings">settings
+
+        <svg id="noApiSign" class="hidden" fill="#ff0000" width="18px" height="18px" viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg">
+
+          <title />
+
+          <g data-name="Layer 21" id="Layer_21">
+
+            <path
+              d="M27.25,22.68,18.51,7.37a2.9,2.9,0,0,0-5,0L4.75,22.68A2.88,2.88,0,0,0,7.25,27h17.5a2.88,2.88,0,0,0,2.5-4.32Zm-1.74,1.88a.85.85,0,0,1-.76.44H7.25a.85.85,0,0,1-.76-.44.87.87,0,0,1,0-.89L15.23,8.36a.89.89,0,0,1,1.54,0l8.75,15.31A.87.87,0,0,1,25.51,24.56Z" />
+
+            <path d="M16,13a1,1,0,0,0-1,1v5a1,1,0,0,0,2,0V14A1,1,0,0,0,16,13Z" />
+
+            <circle cx="16" cy="22" r="1" />
+
+          </g>
+
+        </svg>
+      </button>
+    </div>
+    <p>made by <a href="niiico.com" id="btnNiiico">nico</a>⚡.</p>
+  </footer>
+
+  <script src="content.js"></script>
+</body>
+
+</html>
