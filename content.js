@@ -13,7 +13,7 @@ chrome.storage.local.get(["key"])
         $('#apikeyInput').placeholder = result.key
         authKey = result.key;
     })
-    .catch((err) => { console.log('hay un error, creo que no hay key :c') });
+    .catch((err) => { /* No manejo error porque no quiero */ });
 
 
 
@@ -38,10 +38,8 @@ const translate = (text, sourceLanguage, targetLanguage) => {
             const answer = data?.translations[0]
             $('.divider').classList.remove('transparent')
             $('#textarea_result').textContent = answer?.text
-            console.log(data);
         })
         .catch((error, response) => {
-            console.log(response)
             $('#apiError').classList.remove('transparent')
             console.error('Error en la solicitud:', error);
         });
@@ -94,7 +92,6 @@ $('#btnSaveApiKey').addEventListener('click', () => {
                 $('#apiAddedMssg').classList.add('hidden')
             }, 5000)
             $('#apiError').classList.add('transparent')
-            console.log("Value is set");
             authKey = $('#apikeyInput').value
         });
     }

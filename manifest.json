@@ -3,7 +3,7 @@
 	"name": "Translator in Hand",
 	"version": "1.0",
 	"description": "This extension provides a command to translate texts from a given language to a given language fast.",
-	"permissions": ["storage", "activeTab"],
+	"permissions": ["storage"],
 	"action": {
         "default_icon": {                
           "16": "icon.png",     
